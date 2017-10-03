@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Besoin</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ besoin.id }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if besoin.date %}{{ besoin.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ besoin.titre }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ besoin.description }}</td>
+            </tr>
+            <tr>
+                <th>Cout</th>
+                <td>{{ besoin.cout }}</td>
+            </tr>
+            <tr>
+                <th>Datedemarrage</th>
+                <td>{% if besoin.dateDemarrage %}{{ besoin.dateDemarrage|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Duree</th>
+                <td>{{ besoin.duree }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ besoin.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('besoin_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('besoin_edit', { 'id': besoin.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Besoins list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Cout</th>
+                <th>Datedemarrage</th>
+                <th>Duree</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for besoin in besoins %}
+            <tr>
+                <td><a href="{{ path('besoin_show', { 'id': besoin.id }) }}">{{ besoin.id }}</a></td>
+                <td>{% if besoin.date %}{{ besoin.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ besoin.titre }}</td>
+                <td>{{ besoin.description }}</td>
+                <td>{{ besoin.cout }}</td>
+                <td>{% if besoin.dateDemarrage %}{{ besoin.dateDemarrage|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ besoin.duree }}</td>
+                <td>{{ besoin.status }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('besoin_show', { 'id': besoin.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('besoin_edit', { 'id': besoin.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('besoin_new') }}">Create a new besoin</a>
+        </li>
+    </ul>
+{% endblock %}
