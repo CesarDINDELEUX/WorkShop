@@ -2,12 +2,13 @@
 
 {% block body %}
     <h1>Client creation</h1>
-
+    <form class="form-inline">
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        {{ form_widget(form) }} 
     {{ form_end(form) }}
-
+    <br>
+    <input type="submit" value="Create" />
+    </form>
     <ul>
         <li>
             <a href="{{ path('client_index') }}">Back to the list</a>

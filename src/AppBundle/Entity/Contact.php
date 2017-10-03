@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Client
@@ -200,4 +201,38 @@ class Contact
     
      
 
+
+    /**
+     * Add besoin
+     *
+     * @param \AppBundle\Entity\Client $besoin
+     *
+     * @return Contact
+     */
+    public function addBesoin(\AppBundle\Entity\Client $besoin)
+    {
+        $this->besoins[] = $besoin;
+
+        return $this;
+    }
+
+    /**
+     * Remove besoin
+     *
+     * @param \AppBundle\Entity\Client $besoin
+     */
+    public function removeBesoin(\AppBundle\Entity\Client $besoin)
+    {
+        $this->besoins->removeElement($besoin);
+    }
+
+    /**
+     * Get besoins
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBesoins()
+    {
+        return $this->besoins;
+    }
 }

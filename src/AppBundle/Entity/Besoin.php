@@ -289,4 +289,28 @@ class Besoin
     {
         return $this->client;
     }
+
+    /**
+     * Set contact
+     *
+     * @param \AppBundle\Entity\Contact $contact
+     *
+     * @return Besoin
+     */
+    public function setContact(\AppBundle\Entity\Contact $contact = null)
+    {
+        $this->contact = $contact;
+
+        return $this;
+    }
+
+    /**
+     * Get contact
+     *
+     * @return \AppBundle\Entity\Contact
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
 }
