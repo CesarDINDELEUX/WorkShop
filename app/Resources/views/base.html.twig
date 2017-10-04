@@ -18,18 +18,15 @@
        <a id="logo-container" href="#" class="brand-logo center"><span class="black-text text-darken-3">{{  block('title') }}</span></a>
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><span class="black-text text-darken-3"></span>Welcome César</li>
+            <li><span class="black-text text-darken-3"></span>Welcome {{ app.user.prenom }}</li>
             <li><a href="#" class="black-text text-darken-3">Logout</a></li>
             <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers</a></li>
         </ul>
             <ul class="side-nav" id="mobile-menu">
-                <li><span class="black-text text-darken-3">Welcome César</span></li>
+                <li><span class="black-text text-darken-3">Welcome {{ app.user.prenom }}</span></li>
                 <li><a href="#" class="black-text text-darken-3">Logout</a></li>
                 <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers</a></li>
             </ul>
-            
-            
-
     </div>
 </nav>
 
