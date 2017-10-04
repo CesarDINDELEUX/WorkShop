@@ -25,10 +25,20 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="Entreprise", type="string", length=255)
+     * @ORM\Column(name="Company", type="string", length=255)
      */
     private $entreprise;
 
+    
+        /**
+     * @var string
+     *
+     * @ORM\Column(name="ContactName", type="string", length=255)
+     */
+    private $contactName;
+
+    
+    
     /**
      * @var string
      *
@@ -39,21 +49,28 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="Adresse", type="text")
+     * @ORM\Column(name="Address", type="text")
      */
     private $adresse;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Ville", type="string", length=255)
+     * @ORM\Column(name="Town", type="string", length=255)
      */
     private $ville;
+    
+     /**
+     * @var int
+     *
+     * @ORM\Column(name="ZIP", type="integer")
+     */
+    private $zip;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="Telephone", type="integer")
+     * @ORM\Column(name="PhoneNumber", type="integer")
      */
     private $telephone;
 
@@ -87,10 +104,36 @@ class Client
      *
      * @return string
      */
+    public function getContactName()
+    {
+        return $this->contactName;
+    }
+    
+    
+    /**
+     * Set entreprise
+     *
+     * @param string $contactname
+     *
+     * @return Client
+     */
+    public function setContactName($contactname)
+    {
+        $this->contactName = $contactname;
+
+        return $this;
+    }
+
+    /**
+     * Get entreprise
+     *
+     * @return string
+     */
     public function getEntreprise()
     {
         return $this->entreprise;
     }
+    
 
     /**
      * Set mail
@@ -183,10 +226,35 @@ class Client
      *
      * @return int
      */
+    public function getZip()
+    {
+        return $this->zip;
+    }
+    
+     /**
+     * Set telephone
+     *
+     * @param integer $zip
+     *
+     * @return Client
+     */
+    public function setZip($zip)
+    {
+        $this->zip = $zip;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return int
+     */
     public function getTelephone()
     {
         return $this->telephone;
     }
+    
     
     
     /**
@@ -236,4 +304,10 @@ class Client
     {
         return $this->besoins;
     }
+    
+    public function __toString() {
+    return $this->entreprise;
+}
+    
+    
 }

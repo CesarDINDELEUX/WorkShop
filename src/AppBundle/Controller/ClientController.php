@@ -45,9 +45,9 @@ class ClientController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            
             $em->persist($client);
-            $em->flush();
-
+            $em->flush();           
             return $this->redirectToRoute('client_show', array('id' => $client->getId()));
         }
 
