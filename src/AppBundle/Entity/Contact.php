@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use FOS\UserBundle\Model\User as User;
 
 /**
  * Client
@@ -11,7 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="contact")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ContactRepository")
  */
-class Contact
+class Contact extends User
 {
     /**
      * @var int
@@ -20,7 +21,7 @@ class Contact
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -42,20 +43,6 @@ class Contact
      * @ORM\Column(name="Telephone", type="integer")
      */
     private $telephone;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Mail", type="string", length=255)
-     */
-    private $mail;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Password", type="string", length=255)
-     */
-    private $password;
 
 
     /**
@@ -138,54 +125,6 @@ class Contact
     public function getTelephone()
     {
         return $this->telephone;
-    }
-
-    /**
-     * Set mail
-     *
-     * @param string $mail
-     *
-     * @return Client
-     */
-    public function setMail($mail)
-    {
-        $this->mail = $mail;
-
-        return $this;
-    }
-
-    /**
-     * Get mail
-     *
-     * @return string
-     */
-    public function getMail()
-    {
-        return $this->mail;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     *
-     * @return Client
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->password;
     }
     
     
