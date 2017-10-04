@@ -1,17 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>Client creation</h1>
-    <form class="form-inline">
+{% block content %}
+    {% form_theme form 'materialize_form_theme.html.twig' %} 
     {{ form_start(form) }}
-        {{ form_widget(form) }} 
+        {{ form_widget(form) }}
     {{ form_end(form) }}
-    <br>
-    <input type="submit" value="Create" />
-    </form>
-    <ul>
-        <li>
-            <a href="{{ path('client_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    <p class="center-align">
+     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+     </button>
+    </p>
+    
 {% endblock %}
