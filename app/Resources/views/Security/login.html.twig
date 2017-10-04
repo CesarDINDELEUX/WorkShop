@@ -1,5 +1,4 @@
 {% extends "OCCoreBundle::layout.html.twig" %}
-
 {% block body %}
 
   {# S'il y a une erreur, on l'affiche dans un joli cadre #}
@@ -12,8 +11,8 @@
     <label for="username">Login :</label>
     <input type="text" id="username" name="_username" value="{{ last_username }}" />
 
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" name="_password" />
+    
+    <input type="password" id="password" name="_password"/>
     <br />
     <input type="submit" value="Connexion" />
   </form>
