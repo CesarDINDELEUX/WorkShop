@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-  <div class="container">                                       
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-     <span class="glyphicon glyphicon-menu-hamburger"></span>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
-  </div>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% block stylesheets %}
+  <link href="{{ asset('css/materialize.css') }}" rel="stylesheet"/>
+  <link href="{{ asset('css/your_form_theme.css') }}" rel="stylesheet"/>
+{% endblock %}
+<!-- UserDropDown Structure -->
+
+<nav class="orange">
+    <div class="nav-wrapper">
+       <a id="logo-container" href="#" class="brand-logo center"><span class="black-text text-darken-3">{{  block('title') }}</span></a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><span class="black-text text-darken-3"></span>Welcome César</li>
+            <li><a href="#" class="black-text text-darken-3">Logout</a></li>
+            <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers</a></li>
+        </ul>
+            <ul class="side-nav" id="mobile-menu">
+                <li><span class="black-text text-darken-3">Welcome César</span></li>
+                <li><a href="#" class="black-text text-darken-3">Logout</a></li>
+                <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers</a></li>
+            </ul>
+            
+            
+
+    </div>
+</nav>
+
+
+<div class="container">
+    {% block content %}{% endblock %}
 </div>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
+<script type="text/javascript" src="http://materializecss.com/js/init.js"></script>
+{% block javascripts %}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
+{% endblock %}
+</body>
 </html>
-
