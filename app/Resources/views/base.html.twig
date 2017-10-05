@@ -13,21 +13,44 @@
 {% endblock %}
 <!-- UserDropDown Structure -->
 
+
 <nav class="orange">
     <div class="nav-wrapper">
        <a id="logo-container" href="#" class="brand-logo center"><span class="black-text text-darken-3">{{  block('title') }}</span></a>
        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><span class="black-text text-darken-3"></span>Welcome {{ app.user.prenom }}</li>
-                <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers</a></li>
-            </ul>
-                <ul class="side-nav" id="mobile-menu">
-                    <li><span class="black-text text-darken-3">Welcome {{ app.user.prenom }}</span></li>
-                    <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers</a></li>
-                </ul>
-            {% endif %}
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><span class="black-text text-darken-3"></span>Welcome {{ app.user.prenom }}</li>
+           
+            <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers
+                    <i class="material-icons">perm_contact_calendar</i></a></li>
+            <li><a href="{{ path('client_new') }}" class="black-text text-darken-3">Add customers
+                <i class="material-icons">person_add</i></a></li>
+                 <li>
+                    <li>
+                        <a  href="{{ path('fos_user_security_logout') }}" class="black-text text-darken-3">
+                        <i class="material-icons">power_settings_new</i>
+                            {{ 'Deconnexion'|trans({}, 'FOSUserBundle') }}
+                        </a>
+                    </li>
+            </li>
+        </ul>
+            <ul class="side-nav" id="mobile-menu">
+                <li><span class="black-text text-darken-3">Welcome {{ app.user.prenom }}</span></li>
                 
+                <li><a href="{{ path('client_index') }}" class="black-text text-darken-3">Customers
+                        <i class="material-icons">perm_contact_calendar</i></a></li>
+                <li><a href="{{ path('client_new') }}" class="black-text text-darken-3">Add customers
+                    <i class="material-icons">person_add</i></a></li>
+                    <li>
+                    <li>
+                        <a  href="{{ path('fos_user_security_logout') }}" class="black-text text-darken-3">
+                        <i class="material-icons">power_settings_new</i>
+                            {{ 'Deconnexion'|trans({}, 'FOSUserBundle') }}
+                        </a>
+                    </li>
+                {% endif %}            
+                </li>
             </ul>
     </div>
 </nav>

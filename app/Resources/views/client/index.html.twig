@@ -1,10 +1,25 @@
-{% block title %}Customers List{% endblock %}
+{% block title %}<i class="white-text">Customers List</i>{% endblock %}
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <div class="container">
+     <div class="input-field">
+     <input id="search" type="search" />
+                <label for="search">SEARCH<i class="mdi mdi-magnify"></i></label>
+            </div>
+    <ul class="collection">
     {% for client in clients %}
+  
+        <li class="collection-item avatar">
+      <img src="" alt="" class="circle"> 
+      <span class="title">{{ client.contactname }}</span>
+      <p>{{ client.entreprise }}<br>
+         {{ client.telephone }}
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+      
+    </li>
+    {% endfor %}
         
-        {% endfor %}
+        </ul>
 
 {% endblock %}
