@@ -15,23 +15,23 @@
             </tr>
             <tr>
                 <th>Titre</th>
-                <td>{{ besoin.titre }}</td>
+                <td>{{ besoin.title }}</td>
             </tr>
             <tr>
                 <th>Description</th>
-                <td>{{ besoin.description }}</td>
+                <td>{{ besoin.needs }}</td>
             </tr>
             <tr>
                 <th>Cout</th>
-                <td>{{ besoin.cout }}</td>
+                <td>{{ besoin.cost }}</td>
             </tr>
             <tr>
                 <th>Datedemarrage</th>
-                <td>{% if besoin.dateDemarrage %}{{ besoin.dateDemarrage|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if besoin.startingDate %}{{ besoin.startingDate|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Duree</th>
-                <td>{{ besoin.duree }}</td>
+                <td>{{ besoin.duration }}</td>
             </tr>
             <tr>
                 <th>Status</th>

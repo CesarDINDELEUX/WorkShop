@@ -7,9 +7,9 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Telephone</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Phone Number</th>
                 <th>Mail</th>
                 <th>Password</th>
                 <th>Actions</th>
@@ -19,9 +19,9 @@
         {% for contact in contacts %}
             <tr>
                 <td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
-                <td>{{ contact.nom }}</td>
-                <td>{{ contact.prenom }}</td>
-                <td>{{ contact.telephone }}</td>
+                <td>{{ contact.lastName }}</td>
+                <td>{{ contact.firstName }}</td>
+                <td>{{ contact.phone }}</td>
                 <td>{{ contact.mail }}</td>
                 <td>{{ contact.password }}</td>
                 <td>

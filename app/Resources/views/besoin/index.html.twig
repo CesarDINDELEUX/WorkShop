@@ -8,11 +8,11 @@
             <tr>
                 <th>Id</th>
                 <th>Date</th>
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Cout</th>
-                <th>Datedemarrage</th>
-                <th>Duree</th>
+                <th>Title</th>
+                <th>Needs</th>
+                <th>Cost</th>
+                <th>Starting Date</th>
+                <th>Duration</th>
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
@@ -22,11 +22,11 @@
             <tr>
                 <td><a href="{{ path('besoin_show', { 'id': besoin.id }) }}">{{ besoin.id }}</a></td>
                 <td>{% if besoin.date %}{{ besoin.date|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ besoin.titre }}</td>
-                <td>{{ besoin.description }}</td>
-                <td>{{ besoin.cout }}</td>
-                <td>{% if besoin.dateDemarrage %}{{ besoin.dateDemarrage|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ besoin.duree }}</td>
+                <td>{{ besoin.title }}</td>
+                <td>{{ besoin.needs }}</td>
+                <td>{{ besoin.cost }}</td>
+                <td>{% if besoin.startingDate %}{{ besoin.startingDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ besoin.duration }}</td>
                 <td>{{ besoin.status }}</td>
                 <td>
                     <ul>
