@@ -29,14 +29,10 @@
                             {{ 'Deconnexion'|trans({}, 'FOSUserBundle') }}
                         </a>
                     </li>
-                    
-                {% endif %}
             </li>
         </ul>
             <ul class="side-nav" id="mobile-menu">
                 
-                <li><span class="black-text text-darken-3">Welcome {{ app.user.prenom }}</span></li>
-                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 <li>                 
     <ul class="collapsible" data-collapsible="accordion">
         <li>
@@ -50,9 +46,6 @@
             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
         </li> 
     </ul>
-                    
-                    
-                    
                 </li>
                     <li>
                         <a  href="{{ path('fos_user_security_logout') }}" class="black-text text-darken-3">
