@@ -1,16 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>Client</h1>
+{% block content %}
+    <h1>Customer n° {{client.id}} </h1>
 
     <table>
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ client.id }}</td>
-            </tr>
-            <tr>
-                <th>Entreprise</th>
+                <th>Company</th>
                 <td>{{ client.entreprise }}</td>
             </tr>
             <tr>
@@ -18,15 +14,15 @@
                 <td>{{ client.mail }}</td>
             </tr>
             <tr>
-                <th>Adresse</th>
+                <th>Address</th>
                 <td>{{ client.adresse }}</td>
             </tr>
             <tr>
-                <th>Ville</th>
+                <th>City</th>
                 <td>{{ client.ville }}</td>
             </tr>
             <tr>
-                <th>Telephone</th>
+                <th>Phone number</th>
                 <td>{{ client.telephone }}</td>
             </tr>
         </tbody>

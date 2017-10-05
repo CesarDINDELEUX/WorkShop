@@ -24,10 +24,19 @@ class ClientController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $clients = $em->getRepository('AppBundle:Client')->findAll();
-
+      $clients = $em->getRepository('AppBundle:Client')->findAll();
+        foreach($clients as $item) 
+            {
+            $arrayCollection[] = array(
+            'id' => $item->getId(),
+            'nom' => $item->getContactName()
+            );}
+        
+         
         return $this->render('client/index.html.twig', array(
             'clients' => $clients,
+            'json_clients' => json_encode($arrayCollection)
+            
         ));
     }
 
