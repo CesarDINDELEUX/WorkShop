@@ -26,23 +26,23 @@ class Contact extends User
     /**
      * @var string
      *
-     * @ORM\Column(name="Nom", type="string", length=255)
+     * @ORM\Column(name="LastName", type="string", length=255)
      */
-    private $nom;
+    private $lastName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Prenom", type="string", length=255)
+     * @ORM\Column(name="FirstName", type="string", length=255)
      */
-    private $prenom;
+    private $firstName;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="Telephone", type="integer")
+     * @ORM\Column(name="PhoneNumber", type="integer")
      */
-    private $telephone;
+    private $phoneNumber;
 
 
     /**
@@ -56,75 +56,75 @@ class Contact extends User
     }
 
     /**
-     * Set nom
+     * Set lastName
      *
-     * @param string $nom
+     * @param string $lastName
      *
      * @return Client
      */
-    public function setNom($nom)
+    public function setLastName($lastName)
     {
-        $this->nom = $nom;
+        $this->lastName = $lastName;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get lastName
      *
      * @return string
      */
-    public function getNom()
+    public function getLastName()
     {
-        return $this->nom;
+        return $this->lastName;
     }
 
     /**
-     * Set prenom
+     * Set firstName
      *
-     * @param string $prenom
+     * @param string $firstName
      *
      * @return Client
      */
-    public function setPrenom($prenom)
+    public function setFirstName($firstName)
     {
-        $this->prenom = $prenom;
+        $this->firstName = $firstName;
 
         return $this;
     }
 
     /**
-     * Get prenom
+     * Get firstName
      *
      * @return string
      */
-    public function getPrenom()
+    public function getFirstName()
     {
-        return $this->prenom;
+        return $this->firstName;
     }
 
     /**
-     * Set telephone
+     * Set phoneNumber
      *
-     * @param integer $telephone
+     * @param integer $phoneNumber
      *
      * @return Client
      */
-    public function setTelephone($telephone)
+    public function setPhoneNumber($phoneNumber)
     {
-        $this->telephone = $telephone;
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Get telephone
+     * Get phoneNumber
      *
      * @return int
      */
-    public function getTelephone()
+    public function getPhoneNumber()
     {
-        return $this->telephone;
+        return $this->phoneNumber;
     }
     
     

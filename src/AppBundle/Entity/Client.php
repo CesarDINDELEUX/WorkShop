@@ -27,7 +27,7 @@ class Client
      *
      * @ORM\Column(name="Company", type="string", length=255)
      */
-    private $entreprise;
+    private $company;
 
     
         /**
@@ -51,14 +51,14 @@ class Client
      *
      * @ORM\Column(name="Address", type="text")
      */
-    private $adresse;
+    private $adress;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Town", type="string", length=255)
+     * @ORM\Column(name="City", type="string", length=255)
      */
-    private $ville;
+    private $city;
     
      /**
      * @var int
@@ -72,7 +72,7 @@ class Client
      *
      * @ORM\Column(name="PhoneNumber", type="integer")
      */
-    private $telephone;
+    private $phoneNumber;
 
 
     /**
@@ -86,21 +86,21 @@ class Client
     }
 
     /**
-     * Set entreprise
+     * Set company
      *
-     * @param string $entreprise
+     * @param string $company
      *
      * @return Client
      */
-    public function setEntreprise($entreprise)
+    public function setCompany($company)
     {
-        $this->entreprise = $entreprise;
+        $this->company = $company;
 
         return $this;
     }
 
     /**
-     * Get entreprise
+     * Get company
      *
      * @return string
      */
@@ -111,7 +111,7 @@ class Client
     
     
     /**
-     * Set entreprise
+     * Set company
      *
      * @param string $contactname
      *
@@ -125,13 +125,13 @@ class Client
     }
 
     /**
-     * Get entreprise
+     * Get company
      *
      * @return string
      */
-    public function getEntreprise()
+    public function getCompany()
     {
-        return $this->entreprise;
+        return $this->company;
     }
     
 
@@ -160,69 +160,69 @@ class Client
     }
 
     /**
-     * Set adresse
+     * Set adress
      *
-     * @param string $adresse
+     * @param string $adress
      *
      * @return Client
      */
-    public function setAdresse($adresse)
+    public function setAdress($adress)
     {
-        $this->adresse = $adresse;
+        $this->adress = $adress;
 
         return $this;
     }
 
     /**
-     * Get adresse
+     * Get adress
      *
      * @return string
      */
-    public function getAdresse()
+    public function getAdress()
     {
-        return $this->adresse;
+        return $this->adress;
     }
 
     /**
-     * Set ville
+     * Set city
      *
-     * @param string $ville
+     * @param string $city
      *
      * @return Client
      */
-    public function setVille($ville)
+    public function setCity($city)
     {
-        $this->ville = $ville;
+        $this->city = $city;
 
         return $this;
     }
 
     /**
-     * Get ville
+     * Get city
      *
      * @return string
      */
-    public function getVille()
+    public function getCity()
     {
-        return $this->ville;
+        return $this->city;
     }
 
     /**
-     * Set telephone
+     * Set phoneNumber
      *
-     * @param integer $telephone
+     * @param integer $phoneNumber
      *
      * @return Client
      */
-    public function setTelephone($telephone)
+    public function setPhoneNumber($phoneNumber)
     {
-        $this->telephone = $telephone;
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Get telephone
+     * Get phoneNumber
      *
      * @return int
      */
@@ -232,7 +232,7 @@ class Client
     }
     
      /**
-     * Set telephone
+     * Set phoneNumber
      *
      * @param integer $zip
      *
@@ -246,13 +246,13 @@ class Client
     }
 
     /**
-     * Get telephone
+     * Get phoneNumber
      *
      * @return int
      */
-    public function getTelephone()
+    public function getPhoneNumber()
     {
-        return $this->telephone;
+        return $this->phoneNumber;
     }
     
     
@@ -306,7 +306,7 @@ class Client
     }
     
     public function __toString() {
-    return $this->entreprise;
+    return $this->company;
 }
     
     

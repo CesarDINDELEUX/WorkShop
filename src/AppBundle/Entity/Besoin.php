@@ -31,37 +31,37 @@ class Besoin
     /**
      * @var string
      *
-     * @ORM\Column(name="Titre", type="string", length=255)
+     * @ORM\Column(name="Title", type="string", length=255)
      */
-    private $titre;
+    private $title;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Description", type="text")
+     * @ORM\Column(name="Needs", type="text")
      */
-    private $description;
+    private $needs;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="Cout", type="float")
+     * @ORM\Column(name="Cost", type="float")
      */
-    private $cout;
+    private $cost;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="DateDemarrage", type="date")
+     * @ORM\Column(name="StartingDate", type="date")
      */
-    private $dateDemarrage;
+    private $startingDate;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Duree", type="string", length=255)
+     * @ORM\Column(name="Duration", type="string", length=255)
      */
-    private $duree;
+    private $duration;
 
     /**
      * @var string
@@ -106,123 +106,123 @@ class Besoin
     }
 
     /**
-     * Set titre
+     * Set title
      *
-     * @param string $titre
+     * @param string $title
      *
      * @return Besoin
      */
-    public function setTitre($titre)
+    public function setTitle($title)
     {
-        $this->titre = $titre;
+        $this->title = $title;
 
         return $this;
     }
 
     /**
-     * Get titre
+     * Get title
      *
      * @return string
      */
-    public function getTitre()
+    public function getTitle()
     {
-        return $this->titre;
+        return $this->title;
     }
 
     /**
-     * Set description
+     * Set needs
      *
-     * @param string $description
+     * @param string $needs
      *
      * @return Besoin
      */
-    public function setDescription($description)
+    public function setNeeds($needs)
     {
-        $this->description = $description;
+        $this->needs = $needs;
 
         return $this;
     }
 
     /**
-     * Get description
+     * Get needs
      *
      * @return string
      */
-    public function getDescription()
+    public function getNeeds()
     {
-        return $this->description;
+        return $this->needs;
     }
 
     /**
-     * Set cout
+     * Set cost
      *
-     * @param float $cout
+     * @param float $cost
      *
      * @return Besoin
      */
-    public function setCout($cout)
+    public function setCost($cost)
     {
-        $this->cout = $cout;
+        $this->cost = $cost;
 
         return $this;
     }
 
     /**
-     * Get cout
+     * Get cost
      *
      * @return float
      */
-    public function getCout()
+    public function getCost()
     {
-        return $this->cout;
+        return $this->cost;
     }
 
     /**
-     * Set dateDemarrage
+     * Set startingDate
      *
-     * @param \DateTime $dateDemarrage
+     * @param \DateTime $startingDate
      *
      * @return Besoin
      */
-    public function setDateDemarrage($dateDemarrage)
+    public function setStartingDate($startingDate)
     {
-        $this->dateDemarrage = $dateDemarrage;
+        $this->startingDate = $startingDate;
 
         return $this;
     }
 
     /**
-     * Get dateDemarrage
+     * Get startingDate
      *
      * @return \DateTime
      */
-    public function getDateDemarrage()
+    public function getStartingDate()
     {
-        return $this->dateDemarrage;
+        return $this->startingDate;
     }
 
     /**
-     * Set duree
+     * Set duration
      *
-     * @param string $duree
+     * @param string $duration
      *
      * @return Besoin
      */
-    public function setDuree($duree)
+    public function setDuration($duration)
     {
-        $this->duree = $duree;
+        $this->duration = $duration;
 
         return $this;
     }
 
     /**
-     * Get duree
+     * Get duration
      *
      * @return string
      */
-    public function getDuree()
+    public function getDuration()
     {
-        return $this->duree;
+        return $this->duration;
     }
 
     /**

@@ -10,9 +10,9 @@ class InscriptionType extends AbstractType
    public function buildForm(FormBuilderInterface $builder, array $options)
  
    {
-       $builder->add('Nom');
-       $builder->add('Prenom');
-       $builder->add('Telephone');
+       $builder->add('Nom')
+               ->add('Prenom')
+               ->add('Telephone');
    }
  
    public function getParent()

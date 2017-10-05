@@ -13,7 +13,15 @@ class BesoinType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('date')->add('titre')->add('description')->add('cout')->add('dateDemarrage')->add('duree')->add('status')->add('client')->add('contact');
+        $builder->add('date')
+                ->add('title')
+                ->add('needs')
+                ->add('cost')
+                ->add('startingDate')
+                ->add('duration')
+                ->add('status')
+                ->add('client')
+                ->add('contact');
     }
     
     /**

@@ -23,10 +23,10 @@
        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><span class="black-text text-darken-3"></span>Welcome {{ app.user.prenom }}</li>
+            <li><span class="black-text text-darken-3"></span>Welcome {{ app.user.firstName }}</li>
                     <li>
                         <a  href="{{ path('fos_user_security_logout') }}" class="black-text text-darken-3">
-                            {{ 'Deconnexion'|trans({}, 'FOSUserBundle') }}
+                            {{ 'Logout'|trans({}, 'FOSUserBundle') }}
                         </a>
                     </li>
             </li>
@@ -49,7 +49,7 @@
                 </li>
                     <li>
                         <a  href="{{ path('fos_user_security_logout') }}" class="black-text text-darken-3">
-                            {{ 'Deconnexion'|trans({}, 'FOSUserBundle') }}
+                            {{ 'Logout'|trans({}, 'FOSUserBundle') }}
                         </a>
                     </li>
                 {% endif %}            
